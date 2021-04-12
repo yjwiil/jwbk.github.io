@@ -322,7 +322,7 @@ var _hmt = _hmt || [];
 <h3 id="4）、启动服务"><a href="#4）、启动服务" class="headerlink" title="4）、启动服务"></a>4）、启动服务</h3><p><code> hexo s</code><br><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/chus.jpg"></p>
 <h3 id="5-、测试"><a href="#5-、测试" class="headerlink" title="5)、测试"></a>5)、测试</h3><pre><code>在浏览器中输入访问：http://localhost:4000
 </code></pre>
-<p><img src></p>
+<p><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/liulan.jpg"></p>
 <p>hexo官方参考文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方地址</a></p>
 
     
@@ -349,7 +349,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia，博客搭建</a>
         		</li>
       		
 		</ul>
@@ -416,7 +416,7 @@ var _hmt = _hmt || [];
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2021/04/11/title/" target="_blank">title</a>
+	  <a class="article-title" href="/2021/04/11/title/" target="_blank">我的博客搭建过程-2</a>
   
     </h1>
   
@@ -440,7 +440,40 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><img src="/.xyz//20210411215251.png"></p>
+    <h1 id="将博客部署到github"><a href="#将博客部署到github" class="headerlink" title="将博客部署到github"></a>将博客部署到github</h1><h3 id="github简介："><a href="#github简介：" class="headerlink" title="github简介："></a>github简介：</h3><p>GitHub是一个面向开源及私有软件项目的托管平台，因为只支持Git作为唯一的版本库格式进行托管，故名GitHub。<br> <a target="_blank" rel="noopener" href="https://github.com/">注册地址</a></p>
+<h2 id="一、注册步骤"><a href="#一、注册步骤" class="headerlink" title="一、注册步骤"></a>一、注册步骤</h2><h3 id="1、填写相关信息注册"><a href="#1、填写相关信息注册" class="headerlink" title="1、填写相关信息注册"></a>1、填写相关信息注册</h3><pre><code>进入官网
+</code></pre>
+<p><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/20210412153334.png"><br>    创建用户<br><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/20210412153559.png"></p>
+<h3 id="2、创建仓库"><a href="#2、创建仓库" class="headerlink" title="2、创建仓库"></a>2、创建仓库</h3><pre><code>登录自己的github
+</code></pre>
+<p><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/20210412140340.png"><br>    创建自己的仓库<br><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/ffghjk122.png"><br>注意：此处的仓库名应该与创建GitHub用户名一致，仓库后面加上github.io。<br>例如：<br>    <a target="_blank" rel="noopener" href="https://github.com/xxxx/xxxx.github.io">https://github.com/xxxx/xxxx.github.io</a><br>释义：<br>第一个xxxx：代表用户名<br>第二个xxxx：仓库与用户名同名</p>
+<h3 id="3、获取仓库的https配置到hexo博客根目录的-config-yml中"><a href="#3、获取仓库的https配置到hexo博客根目录的-config-yml中" class="headerlink" title="3、获取仓库的https配置到hexo博客根目录的_config.yml中"></a>3、获取仓库的https配置到hexo博客根目录的_config.yml中</h3><pre><code>登录到github，进入创建的仓库
+</code></pre>
+<p><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/20210412155303.png"></p>
+<h2 id="二、配置部署步骤"><a href="#二、配置部署步骤" class="headerlink" title="二、配置部署步骤"></a>二、配置部署步骤</h2><h3 id="1、配置-config-yml"><a href="#1、配置-config-yml" class="headerlink" title="1、配置_config.yml"></a>1、配置_config.yml</h3><pre><code>使用记事本或者软件打开进行编辑添加配置如下内容：
+</code></pre>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#尾行添加配置如下内容</span></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  type: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  repo: https:<span class="regexp">//gi</span>thub.com<span class="regexp">/yjwiil/y</span>jwiil.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、配置CNAME-可不做"><a href="#2、配置CNAME-可不做" class="headerlink" title="2、配置CNAME(可不做)"></a>2、配置CNAME(可不做)</h3><pre><code>在博客根目录hexo下的source创建一个CNAME的文件。
+</code></pre>
+<p>注意：文档没有后缀<br>在文档编辑输入你需要绑定的域名<br>如下：<br><code>www.jwbk.xyz</code><br>此处编写CNAME文档作用是绑定域名，使用自己的域名更方便。<br>在更新同步时，不用进入仓库进行设置绑定域名。</p>
+<h3 id="3、安装插件"><a href="#3、安装插件" class="headerlink" title="3、安装插件"></a>3、安装插件</h3><p>上传同步需要安装deployer</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="comment">--save hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/2021412d.png" alt="安装完成示例:"></p>
+<h3 id="4、配置git账户"><a href="#4、配置git账户" class="headerlink" title="4、配置git账户"></a>4、配置git账户</h3><pre><code>执行命令配置好git后, 输入账号和密码后部署到远端。
+</code></pre>
+<p>命令格式：</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;输入Git的邮箱地址&quot;</span></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;输入Git的用户名&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code>编辑配置用户命令如下：
+</code></pre>
+<p><code>git config --global --edit  </code></p>
+<h3 id="5、部署到GitHub仓库"><a href="#5、部署到GitHub仓库" class="headerlink" title="5、部署到GitHub仓库"></a>5、部署到GitHub仓库</h3><pre><code>使用hexo d部署到github
+</code></pre>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> cl  <span class="comment">#清除之前生成的静态网页文档</span></span><br><span class="line">hexo g   <span class="comment">#重新生成静态网页</span></span><br><span class="line">hexo d   <span class="comment">#部署到github即同步到github</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/yjwiil/jwtp.gitee.io/raw/master/20210412c.png"></p>
+<h2 id="三、测试"><a href="#三、测试" class="headerlink" title="三、测试"></a>三、测试</h2><pre><code>在网页输入你的网站:https://yjwiil.github.io
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://yjwiil.github.io/">网站</a></p>
 
     
 
@@ -452,7 +485,41 @@ var _hmt = _hmt || [];
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia，博客搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/专业//" class="article-tag-list-link color3">专业</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/专业/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/专业/前端/hexo//" class="article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
     <p class="article-more-link">
@@ -638,7 +705,7 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+                <a href="javascript:void(0)" class="js-tag color1">yilia，博客搭建</a>
               </li>
             
             <div class="clearfix"></div>
